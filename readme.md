@@ -16,8 +16,10 @@ All connections to the administration interfaces of your production instances ha
 First thing first, let's create a security group for our bastion. Naviguate to `COMPUTE > FIREWALLING` and click on the `ADD` button. Give it a name and click `CREATE`.
 ![create security group](./create-new-security-group.png)
 
-Then in the `COMPUTE > FIREWALLING` section click on the newly created group. As we have not yet defined any rule in this group, it is empty and all instances using it will be impossible to connect to. Let's add a rule to allow ssh from our admin workstation.
-Click on the `NEW RULE` button and create a rule using the public ip address of your admin workstation as source and tcp/22 as the authorized port.
+As we have not yet defined any rule, all instances belonging to it using it will be impossible to connect to.
+
+Let's add a rule to allow ssh from our admin workstation. In the `COMPUTE > FIREWALLING` section click on the newly created group. 
+Then, click on the `NEW RULE` button and create a rule using the public ip address of your admin workstation as source and tcp/22 as the authorized port.
 
 ![add-rule-ssh-bastion](./add-rule-ssh-bastion.png)
 
