@@ -13,11 +13,11 @@ All connections to the administration interfaces of your production instances ha
 
 ###Security group
 
-First thing first, let's create a security group for our bastion. Naviguate to COMPUTE > FIREWALLING and click on the `ADD` button. Give it a name and click `CREATE`.
+First thing first, let's create a security group for our bastion. Naviguate to `COMPUTE > FIREWALLING` and click on the `ADD` button. Give it a name and click `CREATE`.
 ![create security group](./create-new-security-group.png)
 
-Then in the FIREWALLING section click on the newly created group. As we have not yet defined any rule in this group, it is empty and all instances using it will be impossible to connect to. Let's add a rule to allow ssh from our admin workstation.
-Click on the `NEW RULE` button and create a rule using the public ip address your admin workstation is using as source and tcp/22 as the authorized port.
+Then in the `COMPUTE > FIREWALLING` section click on the newly created group. As we have not yet defined any rule in this group, it is empty and all instances using it will be impossible to connect to. Let's add a rule to allow ssh from our admin workstation.
+Click on the `NEW RULE` button and create a rule using the public ip address of your admin workstation as source and tcp/22 as the authorized port.
 
 ![add-rule-ssh-bastion](./add-rule-ssh-bastion.png)
 
@@ -32,7 +32,7 @@ If this is not already done, [generate keys](https://community.exoscale.ch/docum
 ssh-keygen has numerous options to enhance security of the generated keys, please read the (documentation)[http://www.openbsd.org/cgi-bin/man.cgi/OpenBSD-current/man1/ssh-keygen.1?query=ssh-keygen&sec=1].
 
 
-Copy the content of the (just created) `~/.ssh/id_rsa_bastion.pub` file. Naviguate to COMPUTE > SSH KEYS and click on the `ADD` button. Be sure that `IMPORT` is selected, name the key, paste the content of the `~/.ssh/id_rsa_bastion.pub` file and click `IMPORT`.
+Copy the content of the (just created) `~/.ssh/id_rsa_bastion.pub` file. Naviguate to `COMPUTE > SSH KEYS` and click on the `ADD` button. Be sure that `IMPORT` is selected, name the key, paste the content of the `~/.ssh/id_rsa_bastion.pub` file and click `IMPORT`.
 
 Important: Keep this private key and its passphrase (if you've used one) in a safe place.
 
@@ -40,7 +40,7 @@ Important: Keep this private key and its passphrase (if you've used one) in a sa
 
 ###Instance
 
-Now let's create an instance in this newly created security group, using the management key-pair. Naviguate to COMPUTE > INSTANCES and click on the `ADD` button.
+Now let's create an instance in this newly created security group, using the management key-pair. Naviguate to `COMPUTE > INSTANCES` and click on the `ADD` button.
 
 Use the following specifications to create the bastion. Unless you plan to use ressources heavy mangement tools to administrate your server, a micro instance should suffice.
 
