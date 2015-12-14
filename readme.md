@@ -25,11 +25,12 @@ Click on `ADD` to complete our management security group setup.
 
 ###SSH key pair
 
-If this is not already done, generate keys on the computer you will use to connect to the bastion.
+If this is not already done, [generate keys](https://community.exoscale.ch/documentation/compute/ssh-keypairs/) on the computer you will use to connect to the bastion.
 
     $ ssh-keygen -t rsa -b 4096 -C 'bastion'
 
 ssh-keygen has numerous options to enhance security of the generated keys, please read the (documentation)[http://www.openbsd.org/cgi-bin/man.cgi/OpenBSD-current/man1/ssh-keygen.1?query=ssh-keygen&sec=1].
+
 
 Copy the content of the (just created) `~/.ssh/id_rsa_bastion.pub` file. Naviguate to COMPUTE > SSH KEYS and click on the `ADD` button. Be sure that `IMPORT` is selected, name the key, paste the content of the `~/.ssh/id_rsa_bastion.pub` file and click `IMPORT`.
 
@@ -75,6 +76,8 @@ Activate it with:
     $ apt-get update && apt-get -y  install fail2ban
 
 The default settings should be suffisant in most cases.
+
+###SSH Tunneling
 
 ###SSH Double authentication
 
