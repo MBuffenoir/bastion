@@ -1,6 +1,6 @@
 #Creating a bastion
 
-A good practice to protect access to your production systems is to create a (bastion)[https://en.wikipedia.org/wiki/Bastion_host]. Specific attention should be paid into its security and its monitoring.
+A good practice to protect access to your production systems is to create a [bastion](https://en.wikipedia.org/wiki/Bastion_host). Specific attention should be paid into its security and its monitoring.
 This document describes how to create such a server and deploy essential security measures to protect it.
 
 This schema illustrates what we are going to achieve:
