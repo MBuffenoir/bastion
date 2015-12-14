@@ -82,7 +82,7 @@ The default settings should be suffisant in most cases.
     
 Install the pam google authenticator module with:
     
-    $ apt-get install libpam-google-authenticator
+    $ apt-get -y install libpam-google-authenticator
 
 Activate it by adding the following line to your /etc/pam.d/sshd file
 
@@ -97,7 +97,6 @@ Then add the following two lines to your /etc/ssh/sshd_config file to force the 
 Don't forget to run `google-authenticator` once in all the accounts you want to protect.
 
 ####Yubikey
-
 
 
 ###Add users
