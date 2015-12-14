@@ -40,7 +40,7 @@ Important: Keep this private key and its passphrase (if you've used one) in a sa
 
 ###Instance
 
-Now we are going to create an instance in this newly created security group, using the management key-pair. Naviguate to COMPUTE > INSTANCES and click on the `ADD` button.
+Now let's create an instance in this newly created security group, using the management key-pair. Naviguate to COMPUTE > INSTANCES and click on the `ADD` button.
 
 Use the following specifications to create the bastion. Unless you plan to use ressources heavy mangement tools to administrate your server, a micro instance should suffice.
 
@@ -52,7 +52,7 @@ You should be logged in on the bastion.
 
 ###Firewalling
 
-From now on, each time you create an instance, make sure at least one security group as rule authorizing connections from the bastion to the management port of this instance.
+From now on, each time you create an instance, make sure at least one security group as a rule authorizing connections from the bastion to the management port of this instance.
 
 Example to create a rule authorizing ssh from the bastion:
 
@@ -64,7 +64,7 @@ Depending on the applications you will manage, you might want to add more ports.
 
 ###Automatic upgrades
 
-You might want to allow for automatic upgrades, to be sure not to miss any security update in ssh:
+You might want to allow for automatic upgrades, to be sure not to miss any security updates of openssh:
 
     $ dpkg-reconfigure -plow unattended-upgrades
 
@@ -78,6 +78,8 @@ Activate it with:
 The default settings should be suffisant in most cases.
 
 ###SSH Tunneling
+
+    ?
 
 ###SSH Double authentication
 
@@ -101,8 +103,11 @@ Don't forget to run `google-authenticator` once in all the accounts you want to 
 
 ####Yubikey
 
+    ?
 
 ###Add users
 
+    ?
+    
 Another good practices consist in adding different users for each admin and only allowing them to execute privileged process using sudo. 
 
