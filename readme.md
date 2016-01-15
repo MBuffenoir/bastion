@@ -1,7 +1,7 @@
 #Creating a bastion for your Cloud Computing setup
 
 No matter how many servers you run in production or what flavor of Linux distribution you use, leaving administration ports
-open on the Internet for your Web Application, SaaS, or Docker cluster is considered secure. A good practice to protect access to your production systems is to create a [bastion](https://en.wikipedia.org/wiki/Bastion_host). In a nutshell, a bastion is the only host from which you can manage all your services. Firewalls rules must be created, so that all the administration interfaces of your services are reachable only from this special host.
+open on the Internet for your Web Application, SaaS, or Docker cluster is considered unsecure. A good practice to protect access to your production systems is to create a [bastion](https://en.wikipedia.org/wiki/Bastion_host). In a nutshell, a bastion is the only host from which you can manage all your services. Firewalls rules must be created, so that all the administration interfaces of your services are reachable only from this special host.
 
 This document describes how to configure security groups, create such a server and deploy essential security measures to protect it, using Exoscale Cloud insfrastructure.
 
